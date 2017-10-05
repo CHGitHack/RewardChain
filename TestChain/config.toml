@@ -3,17 +3,19 @@
 
 [parity]
 # Local Development Chain
-chain = "/home/parity/.local/share/io.parity.ethereum/ownDevChain.json"
+chain = "/home/node/.local/share/io.parity.ethereum/ownDevChain.json"
 
 [rpc]
 # Only selected APIs will be exposed over this interface.
 apis = ["web3", "eth", "net", "parity", "rpc", "personal", "signer", "parity_accounts", "traces", "parity_set"]
-#  JSON-RPC will be listening for connections on IP IPHERE.
-interface = "IPHERE"
+#  JSON-RPC will be listening for connections on IP 10.0.0.5.
+interface = "10.0.0.5"
+hosts = ["*"]
 
 [ipc]
 # Only selected APIs will be exposed over this interface.
 apis = ["web3", "eth", "net", "parity", "parity_accounts", "traces", "rpc", "personal", "signer", "parity_set"]
+hosts = ["*"]
 
 [mining]
 # Targeting 10000000 gas per block when sealing a new block.
@@ -28,9 +30,21 @@ author = "0x00E9627736daBd961BeC44897F05b604A23027D5"
 reseal_min_period = 1
 
 [ui]
-#  Wallet will listen for connections on IP IPHERE.
-interface = "IPHERE"
+#  Wallet will listen for connections on IP 10.0.0.5.
+interface = "10.0.0.5"
+hosts = ["*"]
 
 [dapps]
-#  Dapps Server will listen for connections on IP IPHERE.
-interface = "IPHERE"
+#  Dapps Server will listen for connections on IP 10.0.0.5.
+interface = "10.0.0.5"
+hosts = ["*"]
+
+[websockets]
+#  websockets will be listening for connections on IP 10.0.0.5.
+interface = "10.0.0.5"
+# Allows connecting from Origin 'all'.
+origins = ["*"]
+# Allow connections only using specified addresses.
+hosts = ["*"]
+# Only selected APIs will be exposed over this interface.
+apis = ["web3", "eth", "net", "parity", "parity_pubsub", "rpc", "secretstore", "personal", "parity_accounts", "traces", "signer", "parity_set"]

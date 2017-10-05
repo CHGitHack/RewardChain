@@ -4,7 +4,7 @@ contract RewardId {
 
     address private owner;
 
-    event Output(address indexed sender, address owner_, string nameId_);
+    event OutputId(address indexed sender, address owner_, string nameId_);
 
     //Primitive Implementierung der Attribute als Variablen.
 
@@ -24,11 +24,20 @@ contract RewardId {
      * Funktionen zum Aktualisieren von Attributen.
      */
 
+    function setNewName(string _nameId) {
+        nameId = _nameId;
+    }
+
 
 
     //Abruf von Attributen
 
+    function getName() returns (address owner_, string nameId_) {
+        owner_ = owner;
+        nameId_ = nameId;
 
+        OutputId(msg.sender, owner_, nameId_);
+    }
 
     //Authorisierungsmodifier 
 
