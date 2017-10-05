@@ -24,7 +24,7 @@ contract RewardId {
      * Funktionen zum Aktualisieren von Attributen.
      */
 
-    function setNewName(string _nameId) {
+    function setNewName(string _nameId) onlyBy(owner) {
         nameId = _nameId;
     }
 
