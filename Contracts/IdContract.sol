@@ -28,7 +28,6 @@ contract RewardId {
 
     //Abruf von Attributen
 
-    }
 
 
     //Authorisierungsmodifier 
