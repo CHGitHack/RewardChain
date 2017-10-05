@@ -1,0 +1,36 @@
+# This config should be placed in following path:
+#   ~/.local/share/io.parity.ethereum/config.toml
+
+[parity]
+# Local Development Chain
+chain = "/home/parity/.local/share/io.parity.ethereum/ownDevChain.json"
+
+[rpc]
+# Only selected APIs will be exposed over this interface.
+apis = ["web3", "eth", "net", "parity", "rpc", "personal", "signer", "parity_accounts", "traces", "parity_set"]
+#  JSON-RPC will be listening for connections on IP IPHERE.
+interface = "IPHERE"
+
+[ipc]
+# Only selected APIs will be exposed over this interface.
+apis = ["web3", "eth", "net", "parity", "parity_accounts", "traces", "rpc", "personal", "signer", "parity_set"]
+
+[mining]
+# Targeting 10000000 gas per block when sealing a new block.
+gas_floor_target = "10000000"
+# Gas limit will be raised at most by 15000000 gas.
+gas_cap = "15000000"
+# Parity will reject transactions above 10000000 gas.
+tx_gas_limit = "10000000"
+# Account address to receive reward when block is mined.
+author = "0x00E9627736daBd961BeC44897F05b604A23027D5"
+# New pending block will be created only once per 1 milliseconds.
+reseal_min_period = 1
+
+[ui]
+#  Wallet will listen for connections on IP IPHERE.
+interface = "IPHERE"
+
+[dapps]
+#  Dapps Server will listen for connections on IP IPHERE.
+interface = "IPHERE"

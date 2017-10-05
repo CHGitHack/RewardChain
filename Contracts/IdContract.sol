@@ -24,22 +24,9 @@ contract RewardId {
      * Funktionen zum Aktualisieren von Attributen.
      */
 
-    function setNewInterest(int _interest) onlyBy(bank) {
-        interest = _interest;
-    }
-
-    function setNewPayed(int _payedValue) onlyBy(owner) {
-        payedValue = _payedValue;
-    }
 
 
     //Abruf von Attributen
-
-    function getActValues() returns() {
-
-    }
-
-    function getInterest() returns() {
 
     }
 
