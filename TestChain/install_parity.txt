@@ -1,0 +1,30 @@
+sudo apt-get install curl
+
+
+sudo apt-get install git
+
+
+sudo apt-get install cargo
+
+
+sudo apt-get install gcc
+
+
+sudo apt-get install g++
+
+
+sudo apt-get install libssl-dev
+
+
+sudo apt-get install libudev-dev
+
+
+sudo apt-get install pkg-config
+
+
+curl https://sh.rustup.rs -sSf | sh
+
+
+bash <(curl https://get.parity.io -Lk
+
+parity --ui-no-validation --unsafe-expose
